@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pure">@android:color/transparent</color>
+    <color name="grey">#aa2B2B2B</color>
+     <color  name="pink">#aaFFE1FF</color>
+     <color  name="puple">#aaB23AEE</color>
+     <color  name="backgrey">#aaD4D4D4</color>
+     <color  name="orange">#FFFFFF</color>
+     <color  name="white">#aaFFC1C1</color>
+     <color name="tabcolor">#FFF5EE</color>
+     <color name="list">#EED5D2</color>
+     <color  name="list2"> #FAFAFA</color>
+     <color  name="red">#EE0000</color>
+     <color name="top_of_album">#aaEDEDED</color>
+     <color name="text_color">#F5F5F5</color>
+     <color name="text_background">#1A1A1A</color>
+     <color name="text_color_small">#DEDEDE</color>
+     <color name="currentsong_background">#E5E5E5</color>
+     <color name="currentList">#ffccff</color>
+</resources>
+ 

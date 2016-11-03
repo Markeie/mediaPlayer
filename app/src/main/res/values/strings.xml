@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MicDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+<style name="AnimationFade">  
+  
+    <!-- PopupWindow左右弹出的效果 -->  
+    <item name="android:windowEnterAnimation">@anim/from_right_to_left</item>  
+    <item name="android:windowExitAnimation">@anim/out__left_to_right</item>  
+</style>  
+</resources>

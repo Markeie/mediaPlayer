@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/framelayout"
+        >
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/albumBack"
+            android:scaleType="centerCrop"
+
+
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="40dp"
+            android:background="@color/text_background"
+            android:id="@+id/topOfAlbum"
+
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="630dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="600dp"
+                    android:layout_height="610dp"
+                    android:layout_marginRight="40dp"
+                    android:background="@drawable/popup_backgroup"
+                    android:orientation="vertical" >
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewPager"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center" >
+
+                        <android.support.v4.view.PagerTabStrip
+                            android:id="@+id/tabstrip"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:paddingBottom="5dp" >
+                        </android.support.v4.view.PagerTabStrip>
+                    </android.support.v4.view.ViewPager>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="600dp"
+                    android:layout_height="630dp"
+                    android:orientation="vertical" >
+
+                    <com.example.ap01661.lk_musicplayer.HorseRunningText
+                        android:id="@+id/CurrentSong"
+
+                        android:layout_width="300dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="please select a song  "
+                        android:textColor="@color/orange"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:textSize="40dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/album"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                           android:lines="1"
+                            android:text="album:"
+
+                            android:textSize="20dp"
+                            android:textColor="@color/text_color"
+                            android:paddingRight="10dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/singer"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                          android:lines="1"
+                            android:text="singer:"
+
+                            android:textColor="@color/text_color"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/currentList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:text="list:"
+                            android:textColor="@color/text_color"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/positionOfSong"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:scaleType="fitCenter"
+                            android:src="@mipmap/vvvvvvv"
+
+                            android:layout_gravity="center_vertical"/>
+
+                        <SeekBar
+                            android:id="@+id/volumn"
+                            android:layout_width="500dp"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:minHeight="10dp"
+                            android:progressDrawable="@drawable/voice_bar_style"
+                            android:thumb="@mipmap/a04"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+
+                            android:thumbOffset="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingBottom="30dp" >
+
+                        <!--  <ImageView
+                             android:layout_width="wrap_content"
+                             android:layout_height="match_parent"
+
+
+                             android:src="@drawable/hd"/> -->
+
+                        <com.example.ap01661.lk_musicplayer.ObservableScrollView
+                            android:id="@+id/MySroll"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <LinearLayout
+                                android:id="@+id/lrcLinear"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/musicLrc"
+                                    android:layout_width="450dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textColor="@color/text_color"
+                                    android:paddingTop="290dp"
+                                    android:paddingBottom="300dp"
+                                    android:text="欢迎使用"
+
+                                    android:textSize="25dp" />
+                            </LinearLayout>
+                        </com.example.ap01661.lk_musicplayer.ObservableScrollView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:background="@drawable/playandpause"
+                    android:id="@+id/stop"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/ddd"
+                    android:text="stop" />
+
+                <ImageView
+                    android:id="@+id/staAndPau"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@mipmap/zx"
+                    android:background="@drawable/playandpause"
+                    android:layout_marginRight="10dp"
+
+                    >
+                </ImageView>
+
+                <ImageView
+                    android:background="@drawable/playandpause"
+                    android:id="@+id/play_next"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/gd" />
+
+                <TextView
+                    android:id="@+id/currentTime"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:textSize="25dp" />
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="510dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:maxHeight="8dp"
+                    android:minHeight="8dp"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:thumb="@mipmap/a95"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:thumbOffset="35dp" >
+                </SeekBar>
+
+                <TextView
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/text_color"
+                    android:layout_marginRight="30dp"
+                    android:textSize="25dp" />
+
+                <ImageView
+                    android:id="@+id/state"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/cir"
+                    android:background="@drawable/back_mode" />
+
+
+                <ImageView
+                    android:id="@+id/wordSize"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/word"
+                    android:background="@drawable/back_mode"
+
+
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/querydata"
+                    android:text="querydata"
+
+                    />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/contSize"
+                android:layout_width="442dp"
+                android:layout_height="wrap_content"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
